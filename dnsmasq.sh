@@ -26,6 +26,7 @@ docker run --detach --restart always --name dns \
 	${IMAGE}:2.75 \
 	--log-facility=- \
 	${addresses} \
+	--dns-forward-max 1000 \
 	--domain-needed \
 	--bogus-priv \
 	--expand-hosts
